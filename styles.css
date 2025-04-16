@@ -29,6 +29,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(180deg);
   }
@@ -36,9 +37,10 @@
 
 body {
   background-color: rgb(10, 10, 10);
+  display: grid;
+  height: 100vh;
   margin: 0px;
   overflow: hidden;
-  height: 100vh;
   place-items: center;
 }
 
@@ -55,29 +57,28 @@ h1 {
 h1 > .magic {
   display: inline-block;
   position: relative;
-  overflow: hidden;
 }
 
 h1 > .magic > .magic-star {
   --size: clamp(20px, 1.5vw, 30px);
+
   animation: scale 700ms ease forwards;
   display: block;
   height: var(--size);
-  width: var(--size);
   left: var(--star-left);
-  top: var(--star-top);
   position: absolute;
+  top: var(--star-top);
+  width: var(--size);
 }
 
 h1 > .magic > .magic-star > svg {
+  animation: rotate 1000ms linear infinite;
   display: block;
   opacity: 0.7;
-  animation: rotate 1000ms linear infinite;
 }
 
 h1 > .magic > .magic-star > svg > path {
-  fill: var(--purple);
-  animation: background-pan 3s linear infinite;
+  fill: var(--violet);
 }
 
 h1 > .magic > .magic-text {
@@ -92,5 +93,5 @@ h1 > .magic > .magic-text {
   background-size: 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  white-space: no-wrap;
+  white-space: nowrap;
 }
