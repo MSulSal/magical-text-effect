@@ -33,6 +33,33 @@ h1 {
 }
 
 h1 > .magic {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+h1 > .magic > .magic-star {
+  --size: clamp(20px, 1.5vw, 30px);
+
+  display: block;
+  height: var(--size);
+  width: var(--size);
+  left: var(--star-left);
+  top: var(--star-top);
+  position: absolute;
+}
+
+h1 > .magic > .magic-star > svg {
+  display: block;
+  opacity: 0.7;
+}
+
+h1 > .magic > .magic-star > svg > path {
+  fill: var(--purple);
+  animation: background-pan 3s linear infinite;
+}
+
+h1 > .magic > .magic-text {
   animation: background-pan 3s linear infinite;
   background: linear-gradient(
     to right,
