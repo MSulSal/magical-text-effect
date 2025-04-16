@@ -25,6 +25,15 @@
   }
 }
 
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
 body {
   background-color: rgb(10, 10, 10);
   margin: 0px;
@@ -63,6 +72,7 @@ h1 > .magic > .magic-star {
 h1 > .magic > .magic-star > svg {
   display: block;
   opacity: 0.7;
+  animation: rotate 1000ms linear infinite;
 }
 
 h1 > .magic > .magic-star > svg > path {
